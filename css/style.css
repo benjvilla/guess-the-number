@@ -1,0 +1,185 @@
+
+/*resets the margin on our body element*/
+body {
+  margin: 1vw;
+
+}
+
+/*sets every div that doesn't wrap the h1 to a certain size*/
+div:not(#h1-wrap) {
+  width: 15vw;
+  height: 15vw;
+}
+
+/*styling our main element*/
+main {
+  /*sets the padding*/
+  padding: 8vw;
+  /*tells the div to display as a flex box*/
+  display: flex;
+  /*telling our flex box how to space its items*/
+  justify-content: space-around;
+  /*setting the width of the div*/
+  width: 80vw;
+  /*setting the height to be determined automatically by the content*/
+  height: auto;
+
+  
+}
+
+/*styling our h1*/
+h1 {
+  /*settings the color of the font*/
+  color: white;
+  /*utilizing the font imported in index.html*/
+  font-family: 'Bebas Neue', sans serif;
+  /*setting the size of the font*/
+  font-size: 5vw;
+  /*adding a decorative shadow to the header's text*/
+  text-shadow: 2vh 2vw black;
+}
+
+/*styling the div that wraps our h1*/
+#h1-wrap {
+  /*aligning the text within the div to center*/
+  text-align: center;
+  /*setting the width of the div*/
+  width: 35vw;
+  /*having the margin be determined automatically*/
+  margin: auto;
+  /*setting the background color of the div*/
+  background-color: #06d6a0;
+  /*giving the div a decorative shadow*/
+  box-shadow: .5vw 1vh;
+  /*setting the padding of the div*/
+  padding: 3vh 5vw 2vh 5vw;
+  /*determining the transition animation behavior*/
+  transition: all 0.5s ease;
+  /*determining which properties the transition applies to*/
+  transition-property: width, background-color;
+}
+
+/*setting the behavior of the hover pseudoclass*/
+#h1-wrap:hover {
+  /*on hover, the div widens*/
+  width: 40vw;
+  /*on hover, the background color changes*/
+  background-color: #118ab2;
+  /*determining the transition animation behavior*/
+  transition: all 0.5s ease;
+  /*determining which properties the transition applies to*/
+  transition-property: width, background-color;
+}
+
+/*creating our animation named 'fade'*/
+@keyframes fade {
+  /*at the beginning, the element is completely visible*/
+  0% {
+    opacity: 1;
+  }
+  /*at the end, the element is completely invisible*/
+  100% {
+    opacity: 0;
+  }
+}
+
+/*creating our animation named 'fade-and-rotate'*/
+@keyframes fade-and-rotate {
+   /*at the beginning, the element is completely visible*/
+  0% {
+    opacity: 1;
+  }
+  /*at the end, the element is completely invisible AND rotates 180 degrees*/
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+/*creating our animation named 'square-to-circle-rotate'*/
+@keyframes square-to-circle-rotate {
+  /*at the beginning, the element has: a square border, is red, and does not rotate*/
+  0% {
+    border-radius: 0 0 0 0;
+    background: #ef476f;
+    transform: rotate(0deg);
+  }
+  /*25% of the way through, the element has: one corner rounded, is yellow, and rotates 45 degrees*/
+  25% {
+    border-radius: 50% 0 0 0;
+    background: #ffd166;
+    transform: rotate(45deg);
+  }
+  /*halfway through, the element has: two corners rounded, is red, and rotates 90 degrees*/
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: #ef476f;
+    transform: rotate(90deg);
+  }
+  /*75% of the way through, the element has: three corners rounded, is yellow, and rotates 135 degrees*/
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: #ffd166;
+    transform: rotate(135deg);
+  }
+  /*at the end, the element has: all corners rounded, is red, and rotates 180 degrees*/
+  100% {
+    border-radius: 50%;
+    background: #ef476f;
+    transform: rotate(180deg);
+  }
+}
+
+/*the div that the fade animation is applied to*/
+#fade-div {
+  background-color: #ef476f;
+  
+
+  /*name matches the one on @keyframes*/
+  animation-name: fade;
+  /*duration of animation from start to finish*/
+  animation-duration: 4s;
+  /*delays the start of the animation*/
+  animation-delay: 1s;
+  /*how many times will the animation run*/
+  animation-iteration-count: infinite;
+  /*sets the speed of the animation*/
+  animation-timing-function: linear;
+  /*control over the direction of the animation loop*/
+  animation-direction: alternate;
+}
+
+/*the div that the fade-and-rotate animation is applied to*/
+#fade-and-rotate-div {
+  background-color: #ffd166;
+  
+
+  /*name matches the one on @keyframes*/
+  animation-name: fade-and-rotate;
+  /*duration of animation from start to finish*/
+  animation-duration: 4s;
+  /*delays the start of the animation*/
+  animation-delay: 1s;
+  /*how many times will the animation run*/
+  animation-iteration-count: infinite;
+  /*sets the speed of the animation*/
+  animation-timing-function: ease-in-out;
+  /*control over the direction of the animation loop*/
+  animation-direction: alternate-reverse;
+}
+
+/*the div that the square-to-circle-rotate animation is applied to*/
+#square-to-circle-rotate-div {
+  /*this div utilizes the animation shorthand property that encapsulates all animation related props*/
+  animation: square-to-circle-rotate 2s 1s infinite
+    cubic-bezier(0.85, 0, 0.15, 1) alternate;
+}
+
+/*a media query that changes the size of the font and disables the hover pseudoclass when the screen is smaller or at 500px*/
+@media screen and (max-width: 500px){
+    h1 { font-size: 6vw; }
+    #h1-wrap:hover {
+      display:  none;
+    }
+
+}

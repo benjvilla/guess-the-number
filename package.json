@@ -1,9 +1,8 @@
 {
-  "name": "workshop-example-template",
+  "name": "css-animations-workshop",
   "version": "1.0.0",
   "private": true,
-  "description": "A basic template for instructors to base their workshops on.",
-  "main": "main.js",
+  "description": "A workshop to explore CSS animations.",
   "scripts": {
     "format": "prettier --write --ignore-unknown .",
     "lint": "eslint .",
@@ -12,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BurlingtonCodeAcademy/workshop-example-template.git"
+    "url": "git+https://github.com/BurlingtonCodeAcademy/css-animations-workshop"
   },
   "keywords": [
     "workshop",
     "javascript"
   ],
-  "author": "Joshua Burke",
+  "author": "Julie Assur",
   "license": "LicenseRef-LICENSE",
   "bugs": {
-    "url": "https://github.com/BurlingtonCodeAcademy/workshop-example-template/issues"
+    "url": "https://github.com/BurlingtonCodeAcademy/css-animations-workshop/issues"
   },
-  "homepage": "https://github.com/BurlingtonCodeAcademy/workshop-example-template#readme",
+  "homepage": "https://github.com/BurlingtonCodeAcademy/css-animations-workshop#readme",
   "devDependencies": {
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
