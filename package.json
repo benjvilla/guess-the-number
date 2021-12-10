@@ -1,0 +1,38 @@
+{
+  "name": "workshop-example-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A basic template for instructors to base their workshops on.",
+  "main": "main.js",
+  "scripts": {
+    "format": "prettier --write --ignore-unknown .",
+    "lint": "eslint .",
+    "cleanup": "npm run format && npm run lint",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BurlingtonCodeAcademy/workshop-example-template.git"
+  },
+  "keywords": [
+    "workshop",
+    "javascript"
+  ],
+  "author": "Joshua Burke",
+  "license": "LicenseRef-LICENSE",
+  "bugs": {
+    "url": "https://github.com/BurlingtonCodeAcademy/workshop-example-template/issues"
+  },
+  "homepage": "https://github.com/BurlingtonCodeAcademy/workshop-example-template#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "2.5.0",
+    "pretty-quick": "^3.1.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
