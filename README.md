@@ -43,6 +43,6 @@ This separation is to create modular functionality. You can reuse the same `@key
 
 ### Additional Resources
 
-[CSS-Tricks Animations Almanac Entry](https://css-tricks.com/almanac/properties/a/animation/)
-[Modern Javascript Tutoria's CSS Animations](https://javascript.info/css-animations)
+- [CSS-Tricks Animations Almanac Entry](https://css-tricks.com/almanac/properties/a/animation/)
+- [Modern Javascript Tutoria's CSS Animations](https://javascript.info/css-animations)
 
