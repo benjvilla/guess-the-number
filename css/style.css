@@ -54,9 +54,9 @@ h1 {
   /*setting the padding of the div*/
   padding: 3vh 5vw 2vh 5vw;
   /*determining the transition animation behavior*/
-  transition: all 0.5s ease;
+ 
   /*determining which properties the transition applies to*/
-  transition-property: width, background-color;
+  
 }
 
 /*setting the behavior of the hover pseudoclass*/
@@ -66,68 +66,39 @@ h1 {
   /*on hover, the background color changes*/
   background-color: #118ab2;
   /*determining the transition animation behavior*/
-  transition: all 0.5s ease;
+  
   /*determining which properties the transition applies to*/
-  transition-property: width, background-color;
+  
 }
 
 /*creating our animation named 'fade'*/
 @keyframes fade {
   /*at the beginning, the element is completely visible*/
-  0% {
-    opacity: 1;
-  }
+ 
   /*at the end, the element is completely invisible*/
-  100% {
-    opacity: 0;
-  }
+
 }
 
 /*creating our animation named 'fade-and-rotate'*/
 @keyframes fade-and-rotate {
    /*at the beginning, the element is completely visible*/
-  0% {
-    opacity: 1;
-  }
+
   /*at the end, the element is completely invisible AND rotates 180 degrees*/
-  100% {
-    opacity: 0;
-    transform: rotate(180deg);
-  }
+ 
 }
 
 /*creating our animation named 'square-to-circle-rotate'*/
 @keyframes square-to-circle-rotate {
   /*at the beginning, the element has: a square border, is red, and does not rotate*/
-  0% {
-    border-radius: 0 0 0 0;
-    background: #ef476f;
-    transform: rotate(0deg);
-  }
+
   /*25% of the way through, the element has: one corner rounded, is yellow, and rotates 45 degrees*/
-  25% {
-    border-radius: 50% 0 0 0;
-    background: #ffd166;
-    transform: rotate(45deg);
-  }
+ 
   /*halfway through, the element has: two corners rounded, is red, and rotates 90 degrees*/
-  50% {
-    border-radius: 50% 50% 0 0;
-    background: #ef476f;
-    transform: rotate(90deg);
-  }
+
   /*75% of the way through, the element has: three corners rounded, is yellow, and rotates 135 degrees*/
-  75% {
-    border-radius: 50% 50% 50% 0;
-    background: #ffd166;
-    transform: rotate(135deg);
-  }
+ 
   /*at the end, the element has: all corners rounded, is red, and rotates 180 degrees*/
-  100% {
-    border-radius: 50%;
-    background: #ef476f;
-    transform: rotate(180deg);
-  }
+
 }
 
 /*the div that the fade animation is applied to*/
@@ -136,17 +107,17 @@ h1 {
   
 
   /*name matches the one on @keyframes*/
-  animation-name: fade;
+ 
   /*duration of animation from start to finish*/
-  animation-duration: 4s;
+  
   /*delays the start of the animation*/
-  animation-delay: 1s;
+ 
   /*how many times will the animation run*/
-  animation-iteration-count: infinite;
+  
   /*sets the speed of the animation*/
-  animation-timing-function: linear;
+
   /*control over the direction of the animation loop*/
-  animation-direction: alternate;
+
 }
 
 /*the div that the fade-and-rotate animation is applied to*/
@@ -155,24 +126,23 @@ h1 {
   
 
   /*name matches the one on @keyframes*/
-  animation-name: fade-and-rotate;
+
   /*duration of animation from start to finish*/
-  animation-duration: 4s;
+
   /*delays the start of the animation*/
-  animation-delay: 1s;
+ ;
   /*how many times will the animation run*/
-  animation-iteration-count: infinite;
+ 
   /*sets the speed of the animation*/
-  animation-timing-function: ease-in-out;
+ 
   /*control over the direction of the animation loop*/
-  animation-direction: alternate-reverse;
+  
 }
 
 /*the div that the square-to-circle-rotate animation is applied to*/
 #square-to-circle-rotate-div {
   /*this div utilizes the animation shorthand property that encapsulates all animation related props*/
-  animation: square-to-circle-rotate 2s 1s infinite
-    cubic-bezier(0.85, 0, 0.15, 1) alternate;
+
 }
 
 /*a media query that changes the size of the font and disables the hover pseudoclass when the screen is smaller or at 500px*/
